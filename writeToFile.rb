@@ -7,7 +7,8 @@ require "./keepTime.rb"
 # file.close #closes file when done
 puts "Enter you name: "
 name = gets.chomp.capitalize
-score = 120
+puts "score"
+score = gets.chomp.to_i
 current = [name, score]
 
 name_score = Array.new

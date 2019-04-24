@@ -1,11 +1,10 @@
 $level = 1
 
 class MazeGame
-    attr_reader :board, :theme
+    attr_reader :board
 
-    def initialize(board, theme)
+    def initialize(board)
         @@board = board
-        @@theme = theme
         @@posA = 1
         @@posB = 0
         @@current_pos = @@board[@@posA][@@posB]

@@ -7,9 +7,9 @@ class String
 end
 
 require 'io/console'
-require './game.rb'
 require './mazes.rb'
+require './game.rb'
 
-game = MazeGame.new(ultimate_maze)
+game = MazeGame.new($mazes["maze1"])
 game.print_board()
 game.input()

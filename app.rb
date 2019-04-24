@@ -10,7 +10,6 @@ require 'io/console'
 require './game.rb'
 require './mazes.rb'
 
-# maze & theme.
-game = MazeGame.new(maze1, "default")
+game = MazeGame.new(ultimate_maze)
 game.print_board()
 game.input()

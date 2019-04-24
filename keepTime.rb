@@ -8,6 +8,6 @@ def timer
     print "\r"
   }
 end
-
+timer
 #start when anything pressed
 #until arr4[-1][-2] == character

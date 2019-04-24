@@ -1,29 +1,29 @@
 require 'colorize'
 
 start = 0
-stars1top = "*  *  *  *  *  *  *  *  *  *  *  *  *\n\n".cyan
-stars1bottom = "\n*  *  *  *  *  *  *  *  *  *  *  * ".cyan
-stars2top = " *  *  *  *  *  *  *  *  *  *  *  *  \n\n".red
-stars2bottom = "\n *  *  *  *  *  *  *  *  *  *  *  *  ".red
-stars3top = "  *  *  *  *  *  *  *  *  *  *  *  * \n\n"
-stars3bottom = "\n*  *  *  *  *  *  *  *  *  *  *  *  *"
-message = "Congratulations! You Won!!\n\n".center(stars3top.length).yellow  
+starstop1 = "*  *  *  *  *  *  *  *  *  *  *  *  *\n\n".cyan
+starsbottom1 = "\n*  *  *  *  *  *  *  *  *  *  *  * ".cyan
+starstop2 = " *  *  *  *  *  *  *  *  *  *  *  *  \n\n".red
+starsbottom2 = "\n *  *  *  *  *  *  *  *  *  *  *  *  ".red
+starstop3 = "  *  *  *  *  *  *  *  *  *  *  *  * \n\n"
+starsbottom3 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *"
+message = "Congratulations! You Won!!\n\n".center(starstop3.length).yellow  
 
 
 while(start <= 20)
-   print stars1top
+   print starstop1
    print message
-   print stars1bottom
+   print starsbottom1
    sleep(0.1)
    system("clear")
-   print stars2top
+   print starstop2
    print message
-   print stars2bottom
+   print starsbottom2
    sleep(0.1)
    system("clear")
-   print stars3top
+   print starstop3
    print message
-   print stars3bottom
+   print starsbottom3
    sleep(0.1)
    system("clear")
    start +=1

@@ -17,48 +17,49 @@ class MazeGame
         puts "\nHit 'q' to quit\n"
     end
 
+    def input()
+        loop do
+            case $stdin.getch
+                when 'q' then exit
+                when "\c?" then puts 'backspace'
+                when "\e"
+                case $stdin.getch
+                    when '['
+                    case $stdin.getch
+                        when 'A' then move(@current_pos, "up")
+                        when 'B' then move(@current_pos, "down")
+                        when 'C' then move(@current_pos, "right")
+                        when 'D' then move(@current_pos, "left")
+                    end
+                end
+            end
+        end
+    end
+
     def move(current_pos, direction)
 
-        if (direction === "up")
-            if (@board[@posA-1][@posB] == " ")
+        @board[@posA][@posB] = " "
 
-                @posA = @posA-1
-                @current_pos = @board[@posA][@posB]
-                @board[@posA][@posB] = "c"
-                print_board()
-            end
-
-        elsif (direction === "down")
-
-            if (@board[@posA-1][@posB] == " ")
-
-                @posA = @posA-1
-                @current_pos = @board[@posA][@posB]
-                @board[@posA][@posB] = "c"
-                print_board()
-            end
-
-        elsif (direction === "left")
-
-            if (@board[@posA-1][@posB] == " ")
-
-                @posA = @posA-1
-                @current_pos = @board[@posA][@posB]
-                @board[@posA][@posB] = "c"
-                print_board()
-            end
-
-        elsif (direction === "right")
-
-            if (@board[@posA-1][@posB] == " ")
-
-                @posA = @posA-1
-                @current_pos = @board[@posA][@posB]
-                @board[@posA][@posB] = "c"
-                print_board()
-            end
-
+        if (direction === "right" && @board[@posA][@posB + 1] == " ")
+            @posB = @posB += 1
         end
+
+        if (direction === "left" && @board[@posA][@posB - 1] == " ")
+            @posB = @posB -= 1
+        end
+
+        if (direction === "up" && @board[@posA - 1][@posB] == " ")
+            @posA = @posA -= 1
+        end
+
+        if (direction === "down" && @board[@posA + 1][@posB] == " ")
+            @posA = @posA += 1
+        end
+
+        @current_pos = @board[@posA][@posB]
+        @board[@posA][@posB] = "c"
+
+        print_board()
 
         return @board
     end

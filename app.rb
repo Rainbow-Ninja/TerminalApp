@@ -9,7 +9,10 @@ end
 require 'io/console'
 require './mazes.rb'
 require './game.rb'
+require './congratsMsg.rb'
+require './welcomePage.rb'
 
-game = MazeGame.new($mazes["maze1"])
+welcome
+game = MazeGame.new($mazes[$maze_array[0]])
 game.print_board()
 game.input()

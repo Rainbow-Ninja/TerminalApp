@@ -8,13 +8,20 @@ class MazeGame
         @@posA = 1
         @@posB = 0
         @@current_pos = @@board[@@posA][@@posB]
+        @@board[@@posA][@@posB] = "\xF0\x9F\x9A\x98"
     end
 
     def print_board() #prints out board with level
         system("clear")
-        puts @@board.map{ |board| board.join(' ') }
+        puts @@board.map{ |board| board.join(' ').green }
         puts "\nLevel #{$level}"
         puts "\nHit 'q' to quit\n"
+    end
+
+    def game_over
+        if @@board[9][20] == "\xF0\x9F\x9A\x98"
+            congrats_msg
+        end
     end
 
     def input() #game controls
@@ -39,7 +46,7 @@ class MazeGame
 
         @@board[@@posA][@@posB] = " "
 
-        if (direction === "right" && @@board[@@posA][@@posB + 1] == " ")
+        if (direction === "right" && (@@board[@@posA][@@posB + 1] == " " || @@board[@@posA][@@posB + 1] == "\xF0\x9F\x90\xB6"))
             @@posB += 1
 
         elsif (direction === "left" && @@board[@@posA][@@posB - 1] == " ")
@@ -58,9 +65,9 @@ class MazeGame
 
         @@current_pos = @@board[@@posA][@@posB]
         @@board[@@posA][@@posB] = "\xF0\x9F\x9A\x98"
-
+        
         print_board()
-
+        game_over
         return @@board
     end
 end

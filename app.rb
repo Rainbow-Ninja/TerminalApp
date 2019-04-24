@@ -1,6 +1,6 @@
 require 'io/console'
 require './game.rb'
-require './game.rb'
+require './mazes.rb'
 
 class String
     def cyan; "\e[36m#{self}\e[0m" end

@@ -1,6 +1,7 @@
-class MazeMaps
+
 def ultimate_maze = []
     ultimate_maze = level1,level2,level3,level4
+end
     def level1
         maze1 = Array.new
 
@@ -68,7 +69,6 @@ def ultimate_maze = []
 
 #        print_board(maze4)
     end
-end
 
 # def print_board(maze)
 #     system("clear")
@@ -77,3 +77,4 @@ end
 # end
 
 # level4
+end

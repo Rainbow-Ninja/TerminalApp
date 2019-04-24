@@ -54,3 +54,5 @@ $mazes["maze1"] = maze1
 $mazes["maze2"] = maze2
 $mazes["maze3"] = maze3
 $mazes["maze4"] = maze4
+
+$maze_array = ["maze1", "maze2", "maze3", "maze4"]

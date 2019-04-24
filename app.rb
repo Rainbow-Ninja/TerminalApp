@@ -13,6 +13,6 @@ require './congratsMsg.rb'
 require './welcomePage.rb'
 
 welcome
-game = MazeGame.new($mazes["maze1"])
+game = MazeGame.new($mazes[$maze_array[0]])
 game.print_board()
 game.input()

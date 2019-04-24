@@ -4,7 +4,10 @@ def timer
 
   start_at.upto(1000) { |seconds|
     score = print (time + seconds).strftime('%M:%S')
-    sleep(0.1)
+    sleep(0.05)
     print "\r"
   }
 end
+
+#start when anything pressed
+#until arr4[-1][-2] == character

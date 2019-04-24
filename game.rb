@@ -1,4 +1,4 @@
-$level = 0
+$level = 1
 
 class MazeGame
     attr_reader :board
@@ -51,6 +51,10 @@ class MazeGame
         elsif (direction === "down" && @@board[@@posA + 1][@@posB] == " ")
             @@posA += 1
         end
+
+        # if @@board[10][23] != flag {
+
+        # }
 
         @@current_pos = @@board[@@posA][@@posB]
         @@board[@@posA][@@posB] = "\xF0\x9F\x9A\x98"

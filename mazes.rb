@@ -70,11 +70,9 @@ def level4
 
 end
 
-# def print_board(maze)
-#     system("clear")
-#     puts maze.map { |x| x.join(' ') }
-#     puts "\nHit 'q' to quit "
-# end
-
-# level4
+def print_board(ultimate_maze[$level])
+    system("clear")
+    puts maze.map { |x| x.join(' ') }
+    puts "\nHit 'q' to quit "
+    puts "\nLevel #{level}"
 end

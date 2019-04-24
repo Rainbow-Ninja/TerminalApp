@@ -1,4 +1,4 @@
-$level = 1
+$level = 0
 
 class MazeGame
     attr_reader :board, :theme
@@ -11,14 +11,14 @@ class MazeGame
         @@current_pos = @@board[@@posA][@@posB]
     end
 
-    def print_board()
+    def print_board() #prints out board with level
         system("clear")
-        puts @@board.map{ |el| el.join(' ') }
+        puts @@board.map{ |board| board.join(' ') }
         puts "\nLevel #{$level}"
         puts "\nHit 'q' to quit\n"
     end
 
-    def input()
+    def input() #game controls
         loop do
             case $stdin.getch
                 when 'q' then exit

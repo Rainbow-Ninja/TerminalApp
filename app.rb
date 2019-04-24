@@ -11,6 +11,5 @@ require './game.rb'
 require './mazes.rb'
 
 # maze & theme.
-game = MazeGame.new(maze1, "default")
 game.print_board()
 game.input()

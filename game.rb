@@ -57,7 +57,7 @@ class MazeGame
         end
 
         @current_pos = @board[@posA][@posB]
-        @board[@posA][@posB] = "c"
+        @board[@posA][@posB] = "\xF0\x9F\x9A\x98"
 
         print_board()
 

@@ -1,31 +1,31 @@
-require 'io/console'
-require './game.rb'
-require './mazes.rb'
-
 class String
     def cyan; "\e[36m#{self}\e[0m" end
     def red; "\e[31m#{self}\e[0m" end
     def blue; "\e[34m#{self}\e[0m" end
     def green; "\e[32m#{self}\e[0m" end
+    def yellow; "\e[32m#{self}\e[0m" end
 end
 
+require 'io/console'
+require './game.rb'
+require './mazes.rb'
 
-board1 = Array.new
+maze1 = Array.new
 
-board1[0] = ["-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan]
-board1[1] = ["c".red, " ", " ", " ", " ", "|".cyan, " ", " ", " ", " ", " "," "," "," ", "|".cyan, " ", " ", " ", " ", "|".cyan]
-board1[2] = ["|".cyan, " ", "-".cyan, "-".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, "-".cyan, "-".cyan, "-".cyan, "-".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, " ", "|".cyan]
-board1[3] = ["|".cyan, " ", "|".cyan, " ", " ", " ", " ", " ", " ", " ", " "," "," "," ", " ", " ", " ", "|".cyan, " ", "|".cyan]
-board1[4] = ["|".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, " ", "-".cyan, "-".cyan, " ", " ","-".cyan,"-".cyan," ", "-".cyan, "-".cyan, " ", "|".cyan, " ", "|".cyan]
-board1[5] = ["|".cyan, " ", " ", " ", " ", " ", " ", "|".cyan, "n".red, "n".blue, "n".green, "n".red, "|".cyan, " ", " ", " ", " ", " ", " ", " "]
-board1[6] = ["|".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, " ", "-".cyan, "-".cyan, "-".cyan, "-".cyan,"-".cyan,"-".cyan," ", "-".cyan, "-".cyan, " ", "|".cyan, " ", "|".cyan]
-board1[7] = ["|".cyan, " ", "|".cyan, " ", " ", " ", " ", " ", " ", " ", " "," "," "," ", " ", " ", " ", "|".cyan, " ", "|".cyan]
-board1[8] = ["|".cyan, " ", "-".cyan, "-".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, "-".cyan, "-".cyan, "-".cyan, "-".cyan, " ", "|".cyan, " ", "-".cyan, "-".cyan, " ", "|".cyan]
-board1[9] = ["|".cyan, " ", " ", " ", " ", "|".cyan, " ", " ", " ", " ", " "," "," "," ", "|".cyan, " ", " ", " ", " ", "|".cyan]
-board1[10] = ["-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan,"-".cyan]
+maze1[0] = maze1[10] = Array.new(21, "-")
+maze1[1] = ["\xF0\x9F\x9A\x98", " ", " ", " ", "|", " ", " ", " ", " ", " ", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "|"]
+maze1[2] = ["-", "-", "-", " ", "|", " ", "-", "-", "-", " ", "|", " ", "-", "-", "-", "-", "-", "-", "-", " ", "|"]
+maze1[3] = ["|", " ", " ", " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " ", " ", " ", "|", " ", " ", " ", "|"]
+maze1[4] = ["|", " ", "-", "-", "-", " ", "|", " ", "-", "-", "-", " ", "-", "-", "-", "-", "-", "-", "-", " ", "|"]
+maze1[5] = ["|", " ", "|", " ", " ", " ", "|", " ", " ", " ", "|", " ", "|", " ", " ", " ", " ", " ", " ", " ", "|"]
+maze1[6] = ["|", " ", "|", " ", "-", "-", "-", "-", "-", " ", "|", " ", "-", "-", "-", " ", "|", " ", "-", "-", "|"]
+maze1[7] = ["|", " ", "|", " ", "|", " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " ", "|"]
+maze1[8] = ["|", "-", "-", " ", "|", " ", "|", " ", "-", "-", "-", "-", "-", " ", "-", "-", "-", "-", "-", "-", "-"]
+maze1[9] = ["|", " ", " ", " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\xF0\x9F\x8F\x81"]
 
 
-game = MazeGame.new(board1)
+game = MazeGame.new(maze1)
+
 game.print_board()
 game.input()
 

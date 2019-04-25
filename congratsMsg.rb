@@ -17,7 +17,7 @@ def congrats_msg()
    starsbottom2 = "\n *  *  *  *  *  *  *  *  *  *  *  *  ".red
    starstop3 = "  *  *  *  *  *  *  *  *  *  *  *  * \n\n"
    starsbottom3 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *"
-   message = "Congratulations! You Won!!\n\n".center(starstop3.length).yellow
+   message = "Congratulations! You got your cuddles!\n\n".center(starstop3.length).yellow
 
    while(start <= 20)
       messagePrint(starstop1, message, starsbottom1)

@@ -3,6 +3,7 @@ class MazeGame
 
     #Initialises the game, prints the board and waits for user input.
     def initialize(board)
+
         @@board = board
         @@posA = 1
         @@posB = 0
@@ -18,6 +19,7 @@ class MazeGame
         puts @@board.map{ |board| board.join(' ').green }
         puts "\nLevel #{$level}"
         puts "\nPress 'q' or 'esc' to quit the game.\n"
+
     end
 
     #game input controls
@@ -72,5 +74,6 @@ class MazeGame
 
         #reprints the board with the updated positions and values.
         print_board()
+
     end
 end

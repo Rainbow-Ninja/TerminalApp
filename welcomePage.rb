@@ -1,4 +1,4 @@
-def welcome
+def welcome #print out 'Welcome to aMazing' slowly
     system("clear")
     print "\nW".red
     sleep(0.3)
@@ -43,7 +43,7 @@ def welcome
     instructions
 end
 
-def instructions
+def instructions #print instructions for the game
     system("clear")
     puts "          It's been a long day!\n\n"
     print "  Use the"

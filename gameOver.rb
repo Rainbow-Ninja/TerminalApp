@@ -10,8 +10,8 @@ def game_over(status)
 
         system "clear"
         puts "\n\n"
-        puts "Thanks for playing!".center(100).cyan
-        puts "Game over".center(100).cyan
+        puts "Thanks for playing!".center(100)
+        puts "Game over".center(100)
         puts "\n\n\n\n"
         exit
 

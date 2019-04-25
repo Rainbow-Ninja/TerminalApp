@@ -1,7 +1,8 @@
 class MazeGame
     attr_reader :board
 
-    #Initialises the game, prints the board and waits for user input.
+    #Initialises the game, prints the board, putting your character at the
+    #start of the maze and waits for user input.
     def initialize(board)
 
         @@board = board
@@ -46,7 +47,8 @@ class MazeGame
         #make current positon an empty space
         @@board[@@posA][@@posB] = " "
 
-        #use direction parameter to determine which way to move
+        #use direction parameter to determine which way to move and if the
+        #specified direction is clear.
         if (direction === "right" && (@@board[@@posA][@@posB + 1] === " " || @@board[@@posA][@@posB + 1] == $goal_icon))
             @@posB += 1
 

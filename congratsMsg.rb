@@ -8,6 +8,7 @@ def messagePrint(top, message, bottom)
 end
 
 #defining the congrats message
+#flashing stars at the end of the game
 def congrats_msg()
    start = 0
 

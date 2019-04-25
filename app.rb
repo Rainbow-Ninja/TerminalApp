@@ -1,6 +1,6 @@
 $level = 1
-$player_icon = "\xF0\x9F\x90\xB6"
-$goal_icon = "\xF0\x9F\x8F\xA1"
+$player_icon = "\xF0\x9F\x9A\x98"
+$goal_icon = "\xF0\x9F\x90\xB6"
 
 require 'io/console'
 require_relative './colors.rb'

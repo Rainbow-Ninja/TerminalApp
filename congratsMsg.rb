@@ -1,22 +1,22 @@
 #method to print a congratulatory message
 def messagePrint(top, message, bottom)
+   system("clear")
    print top
    print message
    print bottom
    sleep(0.1)
-   system("clear")
 end
 
 #defining the congrats message
 def congrats_msg()
    start = 0
 
-   starstop1 = "*  *  *  *  *  *  *  *  *  *  *  *  *\n\n".cyan
-   starsbottom1 = "\n*  *  *  *  *  *  *  *  *  *  *  * ".cyan
-   starstop2 = " *  *  *  *  *  *  *  *  *  *  *  *  \n\n".red
-   starsbottom2 = "\n *  *  *  *  *  *  *  *  *  *  *  *  ".red
-   starstop3 = "  *  *  *  *  *  *  *  *  *  *  *  * \n\n"
-   starsbottom3 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *"
+   starstop1 = "*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *\n\n".cyan
+   starsbottom1 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * ".cyan
+   starstop2 = " *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  \n\n".red
+   starsbottom2 = "\n *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  ".red
+   starstop3 = "  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * \n\n"
+   starsbottom3 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *"
    message = "Congratulations! You got your cuddles!\n\n".center(starstop3.length).yellow
 
    while(start <= 20)

@@ -15,11 +15,10 @@ class MazeGame
 
     #prints out board with level
     def print_board()
-        # system("clear")
+        system("clear")
         puts @@board.map{ |board| board.join(' ').green }
         puts "\nLevel #{$level}"
         puts "\nPress 'q' or 'esc' to quit the game.\n"
-
     end
 
     #game input controls

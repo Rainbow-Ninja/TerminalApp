@@ -9,8 +9,10 @@ def game_over(status)
     elsif (status === "quit")
 
         system "clear"
-        puts "Thanks for playing!".cyan
-        puts "   Game over\n\n".cyan
+        puts "\n\n"
+        puts "Thanks for playing!".center(100).cyan
+        puts "Game over".center(100).cyan
+        puts "\n\n\n\n"
         exit
 
     end

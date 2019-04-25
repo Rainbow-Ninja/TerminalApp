@@ -49,6 +49,6 @@ def instructions #print instructions for the game
     print "  Use the"
     print " arrow keys".red
     puts " to drive home through\n\n"
-    puts "the maze to get home and cuddle your puppy \xF0\x9F\x90\xB6"
+    puts "the maze to get home and cuddle your puppy #{$goal_icon}"
     sleep(7)
 end

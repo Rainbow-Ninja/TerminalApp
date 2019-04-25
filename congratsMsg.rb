@@ -1,5 +1,16 @@
-def congrats_msg
+#method to print a congratulatory message
+def messagePrint(top, message, bottom)
+   print top
+   print message
+   print bottom
+   sleep(0.1)
+   system("clear")
+end
+
+#defining the congrats message
+def congrats_msg()
    start = 0
+
    starstop1 = "*  *  *  *  *  *  *  *  *  *  *  *  *\n\n".cyan
    starsbottom1 = "\n*  *  *  *  *  *  *  *  *  *  *  * ".cyan
    starstop2 = " *  *  *  *  *  *  *  *  *  *  *  *  \n\n".red
@@ -8,23 +19,10 @@ def congrats_msg
    starsbottom3 = "\n*  *  *  *  *  *  *  *  *  *  *  *  *"
    message = "Congratulations! You Won!!\n\n".center(starstop3.length).yellow
 
-
    while(start <= 20)
-      print starstop1
-      print message
-      print starsbottom1
-      sleep(0.1)
-      system("clear")
-      print starstop2
-      print message
-      print starsbottom2
-      sleep(0.1)
-      system("clear")
-      print starstop3
-      print message
-      print starsbottom3
-      sleep(0.1)
-      system("clear")
+      messagePrint(starstop1, message, starsbottom1)
+      messagePrint(starstop2, message, starsbottom2)
+      messagePrint(starstop3, message, starsbottom3)
       start +=1
    end
 end

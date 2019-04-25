@@ -1,18 +1,15 @@
-class String
-    def cyan; "\e[36m#{self}\e[0m" end
-    def red; "\e[31m#{self}\e[0m" end
-    def blue; "\e[34m#{self}\e[0m" end
-    def green; "\e[32m#{self}\e[0m" end
-    def yellow; "\e[32m#{self}\e[0m" end
-end
+$level = 1
+$player_icon = "\xF0\x9F\x9A\x97"
+$goal_icon = "\xF0\x9F\x8F\xA1"
 
 require 'io/console'
-require './mazes.rb'
-require './game.rb'
-require './congratsMsg.rb'
-require './welcomePage.rb'
+require_relative './colors.rb'
+require_relative './mazes.rb'
+require_relative './gameOver.rb'
+require_relative './game.rb'
+require_relative './congratsMsg.rb'
+require_relative './welcomePage.rb'
 
-welcome
-game = MazeGame.new($mazes[$maze_array[0]])
-game.print_board()
-game.input()
+
+# welcome()
+game = MazeGame.new( $mazes[$maze_array[0]] )

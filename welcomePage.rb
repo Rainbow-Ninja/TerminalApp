@@ -39,16 +39,16 @@ def welcome
     puts "     \ \._,\ '/                     \ \._,\ '/|         |   |  |   |  | \'. __//  ".cyan
     sleep(0.5)
     puts "      `--'  `-                 `--'  `- |_________|   '--'   '--'  `'---'   ".blue
-    sleep(5) 
+    sleep(5)
     instructions
 end
 
 def instructions
     system("clear")
-    puts "          It's been a long day!\n\n" 
-    print "  Use the" 
-    print " arrow keys".red 
-    puts " to drive home though\n\n" 
+    puts "          It's been a long day!\n\n"
+    print "  Use the"
+    print " arrow keys".red
+    puts " to drive home through\n\n"
     puts "the maze to get home and cuddle your puppy \xF0\x9F\x90\xB6"
     sleep(7)
 end

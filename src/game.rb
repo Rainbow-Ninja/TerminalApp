@@ -49,16 +49,16 @@ class MazeGame
 
         #use direction parameter to determine which way to move and if the
         #specified direction is clear.
-        if (direction === "right" && (@@board[@@posA][@@posB + 1] === " " || @@board[@@posA][@@posB + 1] == $goal_icon))
+        if (direction == "right" && (@@board[@@posA][@@posB + 1] == " " || @@board[@@posA][@@posB + 1] == $goal_icon))
             @@posB += 1
 
-        elsif (direction === "left" && @@board[@@posA][@@posB - 1] === " ")
+        elsif (direction == "left" && @@board[@@posA][@@posB - 1] == " ")
             @@posB -= 1
 
-        elsif (direction === "up" && @@board[@@posA - 1][@@posB] === " ")
+        elsif (direction == "up" && @@board[@@posA - 1][@@posB] == " ")
             @@posA -= 1
 
-        elsif (direction === "down" && @@board[@@posA + 1][@@posB] === " ")
+        elsif (direction == "down" && @@board[@@posA + 1][@@posB] == " ")
             @@posA += 1
         end
 
